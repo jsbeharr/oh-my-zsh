@@ -1,3 +1,4 @@
+# Justin Custom
 # This is a modified version of the ys theme
 # Only difference is that the current directory is only printed
 # and it shows the date in mm-dd-yy format
@@ -48,11 +49,11 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 #
 # For example:
 #
-# % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
-# $
+# % ys @ ys-mbp in [directory] on git:master x [mm:dd:yy] C:0
+# ➜ 
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$terminfo[bold]$fg[magenta]%}%n) \
 %{$fg[white]%}@ \
 %{$fg[green]%}%m \
 %{$fg[white]%}in \
@@ -61,4 +62,4 @@ ${hg_info}\
 ${git_info}\
  \
 %{$fg[white]%}[%W] $exit_code
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+%{$terminfo[bold]$fg[red]%}➜ %{$reset_color%}"
